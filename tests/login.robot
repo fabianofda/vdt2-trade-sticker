@@ -19,3 +19,18 @@ Não deve logar com senha incorreta
     Go to login
     Submit credentials        papito@gmail.com    abc123
     Toast message should be    Credenciais inválidas, tente novamente!
+
+Deve exibir notificacao toaster se a senha nao for preenchida
+    Go To Login
+    Submit Credentials        papito@gmail.com    ${EMPTY}
+    Toast Message Should Be   Por favor, informe a sua senha secreta!
+
+Deve exibir notificacao toaster se o email nao for preenchido
+    Go To Login
+    Submit Credentials        ${EMPTY}    vaibrasil
+    Toast Message Should Be   Por favor, informe o seu email!
+
+Deve exibir notiticacao toaster se email e senha nao forem preenchidos
+    Go To Login
+    Submit Credentials        ${EMPTY}    ${EMPTY}
+    Toast Message Should Be   Por favor, informe suas credenciais!
